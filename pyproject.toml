@@ -17,8 +17,12 @@ pytest-cov = "^6.0.0"
 coverage = "^7.6.12"
 
 [tool.poetry.group.dev.dependencies]
-mypy = "^1.15.0"
+flake8 = "^7.1.2"
+flake8-pyproject = "^1.2.3"
+isort = "^6.0.0"
 black = "^25.1.0"
+mypy = "^1.15.0"
+pre-commit = "^4.1.0"
 
 [tool.pytest.ini_options]
 addopts = [
@@ -51,6 +55,18 @@ strict_optional = true
 warn_redundant_casts = true
 warn_return_any = true
 warn_unused_ignores = true
+
+[tool.flake8]
+max-line-length = 88
+exclude = [".git", "__pycache__"]
+count = true
+extend-ignore = ["E203", "E701"]
+
+[tool.black]
+line-length = 88
+
+[tool.isort]
+profile = "black"
 
 [build-system]
 requires = ["poetry-core"]
