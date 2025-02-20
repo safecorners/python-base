@@ -9,9 +9,29 @@ packages = [{include = "base", from = "src"}]
 [tool.poetry.dependencies]
 python = "^3.12"
 
+[tool.poetry.group.test.dependencies]
+pytest = "^8.3.4"
+pytest-mock = "^3.14.0"
+pytest-xdist = "^3.6.1"
+pytest-cov = "^6.0.0"
+coverage = "^7.6.12"
 
 [tool.poetry.group.dev.dependencies]
 mypy = "^1.15.0"
+
+[tool.pytest.ini_options]
+addopts = [
+    "--import-mode=importlib",
+    "-ra",
+    "-q",
+    "-vv"
+]
+pythonpath = ["src"]
+testpaths = ["tests"]
+log_cli = true
+log_cli_level = "DEBUG"
+log_format="%(asctime)s %(levelname)s %(message)s"
+log_date_format="%Y-%m-%d %H:%M:%S"
 
 [tool.mypy]
 disallow_any_generics = true
