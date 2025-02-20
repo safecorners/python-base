@@ -3,6 +3,7 @@
 ## Usage
 ```bash
 poetry install
+pre-commit install
 ```
 
 ## Todos
@@ -11,5 +12,5 @@ poetry install
 - [x] black for formatting
 - [x] isort for organizing imports
 - [x] flake8 for linting
-- [ ] precommit for integration
-- [ ] git actions for styles
+- [x] precommit for integration
+- [x] git actions for styles

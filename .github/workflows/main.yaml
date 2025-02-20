@@ -34,5 +34,5 @@ jobs:
       - name: Test
         run: poetry run pytest --cov --cov-report json
       - name: Execute pre-commit
-        run : pre-commit run --show-diff-on-failure --color=always --all-files
+        run : poetry run pre-commit run --show-diff-on-failure --color=always --all-files
         shell: bash
