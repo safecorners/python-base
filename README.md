@@ -12,5 +12,6 @@ pre-commit install
 - [x] black for formatting
 - [x] isort for organizing imports
 - [x] flake8 for linting
-- [x] precommit for integration
-- [x] git actions for styles
+- [x] pre-commit for styles
+- [ ] git actions for integration
+- [ ] replace flake8 with ruff
